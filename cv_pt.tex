@@ -1,0 +1,304 @@
+%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.4, 12 Apr 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm,columnsep=0.5cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+\newcommand{\scholargoogle}[1]{\href{#1}{Google Scholar}}
+\NewInfoField*{lattes}{\faGraduationCap}
+
+% Change the colours if you want to
+\definecolor{heading_color}{HTML}{5E5C4B}
+\definecolor{heading_rule}{HTML}{5E5C4B}
+\definecolor{emphasis_color}{HTML}{012E0D }
+\definecolor{body_color}{HTML}{020F05}
+\definecolor{subheading_color}{HTML}{0B1268}
+\colorlet{name}{black}
+\colorlet{tagline}{black}
+\colorlet{heading}{heading_color}
+\colorlet{headingrule}{heading_rule}
+\colorlet{subheading}{subheading_color}
+\colorlet{accent}{heading_color}
+\colorlet{emphasis}{emphasis_color}
+\colorlet{body}{body_color}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% Publicações mantidas neste arquivo.
+\addbibresource{publications.bib}
+
+\begin{document}
+\name{Hugo Abreu}
+\tagline{Desenvolvedor Sênior (Full Stack/Embedded) | Especialista em IA | MSc em Sistemas}
+%% You can add multiple photos on the left or right
+%%\photoR{2.5cm}{phtoo}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{hugoabreu1002@gmail.com}
+   \phone{(81)97915-3699}
+% \mailaddress{Rua Dr. Enéas de Lucena}
+  \location{Rua Wagner 1340, Manaus - AM}
+  \linkedin{https://www.linkedin.com/in/hugoabreumendes/}
+  \scholargoogle{https://scholar.google.com/citations?user=CUtwvawAAAAJ&hl=en}
+  \orcid{0000-0002-0474-2680}
+  \lattes{Lattes}{http://lattes.cnpq.br/0341866422719760}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experiência Profissional}
+
+\cvevent{Desenvolvedor de Software Sênior}{SIDIA}{Jun. 2022 -- Atual}{Manaus, AM}
+\begin{itemize}
+
+    \item Desenvolvimento de PoCs como: Estimativa de Posição de TVs em ambientes internos para prevenção de pirataria e sugestão de conteúdo, análise de comportamento de usuários para VoD via enxame de agências e recuperação de conteúdo. Modelagem de redes de grafos para navegação de TV para deficientes visuais via controle remoto.
+
+    \item Python/NodeJS/React: Animações de IA Generativa baseadas em movimentos humanos + FastAPI \& React. Estimativa de pose e detecção de objetos com mediapipe e yolo, respectivamente. Processamento de vídeo e detecção de similaridade. NLP (Spacy, NLTK) para geração de dataset PT-BR x LIBRAS. Uso de modelos LSTM (TensorflowJS) e T5 Transformers (HuggingFace) para tradução Seq2Seq. Transcrição de áudio com Whisper e Vosk e libs nativas em TizenOS. Também criando uma lib completa em C\# do zero para tradução pt-BR para LIBRAS baseada em mudanças de estrutura semântica e sintática de ambas as línguas.
+
+    \item Trabalho na implantação da solução de tradução de português para LIBRAS para transmissão DTV+ (TV 3.0).
+    
+    \item Desenvolvimento de um app NodeJS + React + Electron (front-end). Uso de Python para tarefas de descrição de imagem e vídeo com modelos CLIP e BLIP, e aplicação de modelos NLP e Transformers para paráfrase (HuggingFace).
+    
+    \item C++ (20, 17, 11), C\# (.NET 8): Desenvolvimento DTVPlus para TVs Tizen. Manutenção, depuração e adição de novos recursos a bibliotecas e aplicações C/C++ e C\# para Tizen, especificamente para câmeras e dispositivos IoT.
+    
+    \item Automação de testes de desempenho de firmware com um app C++/Bash para Linux embarcado (TizenOS), usando Python Flask para APIs e renderização front-end, Docker + PostgreSQL para o banco de dados do app.
+    
+    \item Aplicação de deep learning para verificar imagens de checkpoint e classificar automaticamente KPIs de desempenho. Uso de Python Django RestAPI para coleta de dados, OpenCV e Scikit-learn + TensorFlow para gerar classificações.
+    
+    \item Escrita de artigos científicos e patentes.
+    
+\end{itemize}
+\divider
+
+\cvevent{Prompt Engineer}{Outlier}{Jun. 2023 -- Fev. 2025}{Remoto | Freelance}
+
+Aprimorando Grandes Modelos de Linguagem para necessidades específicas de treinamento:
+
+\begin{itemize}
+        
+    \item Revisão de código gerado por LLMs em múltiplas linguagens de programação (Go, Python, C, C++, C\#, Java, JavaScript, TypeScript) para atender a prompts específicos.
+
+    \item Especialização em ciência de dados e treinamento de grandes modelos de linguagem para resolver diversos desafios relacionados a prompts.
+
+    \item Trabalho em projetos de aprendizado por reforço com feedback humano relacionados à geração de prompts, geração de código, revisão de código e correção de código para grandes modelos de linguagem.
+
+    \item Aplicação de técnicas adversárias em chatbots para detectar possibilidade de geração de malware.
+
+    \item Detecção de malware gerado por LLMs através de revisões de código e análise de intenção de prompts.
+
+    \item Geração de novos prompts do zero para testar as capacidades do LLM e revisão de prompts gerados por outros para ajustar em termos de usabilidade e níveis de dificuldade.
+
+    \item Revisão de rotulagem gerada por outros como prompt engineer de confiança.
+    
+\end{itemize}
+\divider
+
+\cvevent{Engenheiro de Sistemas}{FITec}{Fev. 2019 -- Maio. 2022}{Recife, PE}
+\begin{itemize}
+
+    \item C\# .Net para sistemas embarcados (WindowsCE) e Windows Apps para comunicação e integração de sistemas, usados para supervisão e ajuste de rotas de trens.
+
+    \item Desenvolvimento de ferramentas de controle de qualidade e automação para fabricantes de computadores, notebooks e all-in-ones. BASH e Python: FastAPI.
+    
+    \item Implantação e atualização de servidores Nokia VitalQIP IPAM (IP Address Management) e DNS em servidores RHEL.
+    
+    \item Automação da importação massiva de dados de rede no VitalQIP, mantendo a estrutura de rede e inserindo informações de clientes finais.
+    
+    \item Desenvolvimento de soluções de automação em Python, Java e BASH, para integração em servidores RHEL, comunicando-se com roteadores Nokia 77XX.
+    
+    \item Desenvolvimento de scripts em Apache Velocity na ferramenta Nokia NSP para automatizar a configuração de roteadores Nokia 77XX.
+    
+    \item Implantação do Nokia NSP para gerenciamento de roteadores em servidores RHEL.
+    
+    \item Implementação de Nokia AAA (protocolo Radius) em servidor CentOS / RHEL.
+    
+    \item Análise e correção de vulnerabilidades de segurança em sistemas RHEL, incluindo hardening de servidores.
+    
+    \item Fornecimento de soluções para redes IP, incluindo upgrades lógicos na infraestrutura de rede e garantia da consistência de pools IP e topologia de rede.
+    
+    \item Personalização de distribuição Linux baseada em Debian para instalação OEM.
+    
+    \item Resolução de problemas multidisciplinares utilizando aprendizado de máquina, otimização, estatística e outras ferramentas matemáticas e computacionais, como processamento digital de sinais e imagens, com bibliotecas Python como NumPy, Scikit-learn, SciPy e Pandas.
+    
+    \item Desenvolvimento de aplicações web (API) e microsserviços com modelos computacionais usando SpringBoot e Flask. Uso da ferramenta de teste Selenium para Web Scraping.
+    
+    \item Implementação de caderno de teste na etapa de desenvolvimento de um medidor inteligente (Protocolo DLMS). Automação da estrutura de objetos COSEM em XML usando Python.
+    
+\end{itemize}
+\divider
+
+\cvevent{Monitor de Aulas de CLP}{CTG UFPE}{Ago. 2018 --  Dez. 2018}{Recife, PE}
+\begin{itemize}
+
+    \item Assistência em aulas de CLP para os cursos de Engenharia Elétrica e Controle \& Automação na UFPE.
+    \item Preparação de aulas e resolução de exercícios envolvendo o uso e programação de CLPs SIEMENS S7-1200.
+    \item Instrumentação industrial usando motores de passo, motores AC \& DC, encoders ópticos e inversores de frequência.
+    
+\end{itemize}
+
+\divider
+
+\cvevent{Estágio de Pesquisa}{FACEPE}{Ago. 2017 -- Jul. 2018}{Recife, PE}
+\begin{itemize}
+
+    \item Desenvolvimento de equipamento de imagem por infravermelho próximo para diagnóstico de lesões de pele.
+    \item Envolvimento em prototipagem mecânica usando SolidWorks, projeto de circuitos fotoeletrônicos e condução de processamento de imagem e sinal com Python e MATLAB.
+    \item Processamento digital de espectros de absorbância de luz infravermelha da pele, utilizando PCA e SVM para diagnóstico de doenças autoimunes raras.
+    \item Desenvolvimento de um dispositivo de imagem usando LEDs infravermelhos e fotossensores. Condução de processamento digital de imagem de dentes bovinos para estudar radiação e espalhamento infravermelho, e avaliar qualidade de imagem.
+    \item Desenvolvimento de um sistema supervisório baseado em LabView para caracterização de amostras aquosas, comunicando via OPC com MATLAB e hardware de metrologia da National Instruments, MyDAQ.
+    
+\end{itemize}
+
+\divider
+
+\cvevent{Estágio}{WT Engenharia}{Out. 2017 -- Maio. 2018}{Recife, PE}
+\begin{itemize}
+
+    \item Manutenção e montagem de módulo eletrônico embarcado de comunicação RF para detecção de orvalho, como protocolo seguro, para trabalhar com linhas de transmissão de alta tensão energizadas.
+    \item Projeto IoT aplicado à atuação de chaves seccionadoras usando microcontroladores (Arduino) e rede WIFI (ESP8266), protocolo mestre-escravo TCP/IP.
+    
+\end{itemize}
+
+
+\switchcolumn
+
+\cvsection{Publicações Científicas}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Artigos Científicos em Periódicos}}, type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Anais de Conferências}},type=inproceedings]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Patentes}},type=misc]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+
+\cvsection{Educação}
+
+\cvevent{Mestrado em Engenharia de Sistemas}{Universidade de Pernambuco}{Mar. 2020 -- Jan. 2022}{Recife, BR}
+
+\divider
+
+\cvevent{Especialização em Inteligência Artificial}{UPE}{Fev. -- Nov. 2019}{Recife, BR}
+
+\divider
+
+\cvevent{Engenharia de Controle e Automação}{Universidade Federal de Pernambuco}{2013 -- 2018}{Recife, BR}
+
+\divider
+
+\cvevent{Engenharia Eletrônica}{ENSEEIHT}{2015 -- 2016}{Toulouse, FR}
+
+\switchcolumn
+
+\cvsection{Programação \& Tecnologia}
+
+\cvtag{Python}
+\cvtag{Pytorch}
+\cvtag{TensorFlow}
+\cvtag{LLM / Transformers}
+\cvtag{SciKitLearn}
+\cvtag{Pandas}
+\cvtag{Visão Computacional}
+\cvtag{Séries Temporais}
+\cvtag{Prompt Engineering}
+
+\cvtag{C/C++ \& C\#}
+\cvtag{STL}
+\cvtag{Boost}
+\cvtag{Glib}
+\cvtag{GStreamer}
+
+\cvtag{Linux \& Scripts Bash}
+\cvtag{JavaScript}
+\cvtag{React}
+\cvtag{JAVA}
+
+\cvsection{Certificações}
+
+\cvtag{Docker: Criando e Gerenciando Containers}
+\cvtag{Testes em .NET: Criando Testes de Unidade com xUnit}
+\cvtag{Developing on AWS (3.4.0)}
+\cvtag{.NET: Criando uma API Web com ASP.NET Core}
+\cvtag{Hugging Face: Aprimorando Eficiência de Modelos com Optimum}
+
+\cvsection{Línguas Estrangeiras}
+
+\cvskill{Português (nativo)}{5}
+
+\cvskill{Inglês}{5}
+
+\cvskill{Francês}{4}
+
+\cvskill{Espanhol}{2}
+
+
+
+\end{paracol}
+\end{document}
